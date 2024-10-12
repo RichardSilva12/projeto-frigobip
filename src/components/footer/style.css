@@ -1,0 +1,78 @@
+.footer {
+    background-color: #b10127;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px;
+    position:relative ; /* Fica na parte inferior */
+    bottom: 0; /* Alinha à parte inferior */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre a logo e o conteúdo */
+    align-items: flex-start; /* Alinha os itens no topo do footer */
+    padding: 0 30px ;
+}
+
+.row {
+    display: contents;
+    justify-content: space-between; /* Espaçamento entre colunas */
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura */
+}
+
+.col-md-4 {
+    flex-basis: 30%; /* A logo ocupa 50% do espaço */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 150px; /* Ajusta o tamanho da logo */
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start; /* Alinha os ícones de redes sociais à esquerda */
+    margin-top: 10px;
+}
+
+.social-media li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.conteudo {
+    flex-basis:20%; /* O conteúdo ocupa 25% de largura */
+    text-align: justify; /* Alinha o texto à direita */
+}
+
+.conteudo h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.conteudo p {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 150px;
+    width: 100%;
+}

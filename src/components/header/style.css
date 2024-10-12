@@ -1,0 +1,87 @@
+.header {
+  background-color: rgba(177, 1, 39, 0.9); /* Torna o header levemente transparente */
+  padding: 10px 100px 10px 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+  position: absolute; /* Fixa o header no topo da página */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Garante que o header fique acima do carrossel */
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.header .logo img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.header .conteudo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header .conteudo ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header .conteudo li {
+  margin-right: 20px;
+}
+
+.header .conteudo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header .header-right button {
+  margin-left: 20px;
+  background-color: #b16010;
+  color: #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*  icons */
+.header .logos {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Adiciona um espaçamento entre os botões e os ícones */
+}
+
+.header .logos .social-icon {
+  width: 25px; /* Define um tamanho menor para os ícones */
+  height: 25px;
+  margin-left: 10px; /* Espaçamento entre os ícones sociais */
+  cursor: pointer;
+}
+
+/* Estilos para o carrossel ficar abaixo do header */
+.carousel-container {
+  margin-top: 60px; /* Garante que o carrossel comece após o header */
+  position: relative;
+  z-index: 1; /* Certifica-se que o carrossel fique atrás do header */
+}

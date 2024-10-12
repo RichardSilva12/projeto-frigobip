@@ -1,0 +1,39 @@
+/* Remove qualquer margem ou padding entre os componentes principais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+ /* Estilos globais */
+body {
+    background-color: #DC7B1A; /* Cor de fundo desejada */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    color: #333; /* Cor do texto padrão (opcional) */
+}
+
+/* Ajuste da página de receita */
+.receita-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+
+
+/* Header com espaçamento */
+.receita-container {
+  background-color: #e98096; /* Fundo vermelho */
+  color: white; /* Texto branco */
+  text-align: center;
+  padding: 20px 0; /* Espaçamento de 40px */
+  font-size: 24px; /* Texto grande */
+  font-weight: bold;
+  margin-top: 150px; /* Espaçamento abaixo do header */
+  flex-grow: 1; /* Faz o container crescer até o rodapé */
+}
+
+/* Footer sempre na parte inferior */
+footer {
+  margin-top: auto; /* Empurra o footer para baixo */
+}
