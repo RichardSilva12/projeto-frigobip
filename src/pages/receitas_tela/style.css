@@ -20,10 +20,9 @@ body {
 }
 
 
-
 /* Header com espaçamento */
 .receita-container {
-  background-color: #e98096; /* Fundo vermelho */
+  background-color: #b10127; /* Fundo vermelho */
   color: white; /* Texto branco */
   text-align: center;
   padding: 20px 0; /* Espaçamento de 40px */
@@ -31,9 +30,20 @@ body {
   font-weight: bold;
   margin-top: 150px; /* Espaçamento abaixo do header */
   flex-grow: 1; /* Faz o container crescer até o rodapé */
-}
+  }
+
+.info-container_tela {
+  background-color: #DC7B1A; /* Fundo vermelho */
+  text-align: center;
+  padding: 100px 0; /* Espaçamento de 40px */
+  font-weight: bold;
+  margin-top: 600px; /* Espaçamento abaixo do header */
+  flex-grow: 1; /* Faz o container crescer até o rodapé */
+  }
 
 /* Footer sempre na parte inferior */
 footer {
   margin-top: auto; /* Empurra o footer para baixo */
 }
+
+

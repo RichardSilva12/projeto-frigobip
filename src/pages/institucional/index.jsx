@@ -5,8 +5,13 @@ import './style.css';
 
 function Institucional() {
   return (
-    <div>
+    <div className='page'>
       <Header />
+      <div className="empresa-container">
+        <h1>NOSSA EMPRESA</h1>
+      </div>
+      <div className="info-container_tela">
+      </div>
       <Footer />
     </div>
   );

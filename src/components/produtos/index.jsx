@@ -1,3 +1,4 @@
+
 import React from 'react';
 import image1 from '../../../src/assets/img_produtos/produto1.jpeg';
 import image2 from '../../../src/assets/img_produtos/produto2.jpeg';

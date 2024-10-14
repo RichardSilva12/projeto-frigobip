@@ -10,6 +10,9 @@ function Receita() {
       <div className="receita-container">
         <h1>RECEITA</h1>
       </div>
+      <div className='info-container_tela'>
+        {/* Conteúdo adicional pode ser colocado aqui */}
+      </div>
       <Footer />
     </div>
   );

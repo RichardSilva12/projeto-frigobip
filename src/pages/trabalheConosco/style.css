@@ -1,8 +1,111 @@
 /* Remove qualquer margem ou padding entre os componentes principais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+  background-color: #DC7B1A; /* Cor de fundo desejada */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  color: #333; /* Cor do texto padrão */
+}
+
+/* Ajuste da página de trabalhe conosco */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+/* Container de formulário */
+.trabalhe-container {
+  background-color: #b10127;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 150px;
+  flex-grow: 1;
+}
+
+.info-container_tela {
+  background-color: #DC7B1A; /* Fundo vermelho */
+  text-align: center;
+  padding:  0; /* Espaçamento de 40px */
+  font-weight: bold;
+  margin-top: 40px; /* Espaçamento abaixo do header */
+  flex-grow: 1; /* Faz o container crescer até o rodapé */
   }
-  
- 
+
+
+/* Footer sempre na parte inferior */
+footer {
+  margin-top: 100px;
+}
+
+
+/* Container do formulário */
+.form-curriculo-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando o formulário */
+.form-curriculo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mudar a cor dos labels para preto */
+.form-curriculo label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: black; /* Definindo a cor do texto como preto */
+  text-align: left;
+}
+
+.form-curriculo h1 {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black; /* Definindo a cor do texto como preto */
+  text-align: center;
+}
+
+.form-curriculo input,
+.form-curriculo select,
+.form-curriculo textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-curriculo textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-curriculo button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b10127;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-curriculo button:hover {
+  background-color: #8a021e;
+}
