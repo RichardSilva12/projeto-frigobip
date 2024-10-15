@@ -3,76 +3,76 @@
     color: #fff;
     font-family: sans-serif;
     padding: 20px;
-    position:relative ; /* Fica na parte inferior */
-    bottom: 0; /* Alinha à parte inferior */
-    left: 0; /* Alinha à esquerda */
-    right: 0; /* Alinha à direita */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .container {
     display: flex;
-    justify-content: space-between; /* Espaçamento entre a logo e o conteúdo */
-    align-items: flex-start; /* Alinha os itens no topo do footer */
-    padding: 0 30px ;
+    justify-content: space-between; /* Espaçamento entre logo, conteúdo e redes sociais */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 0 150px; /* Ajuste conforme necessário */
 }
 
-.row {
-    display: contents;
-    justify-content: space-between; /* Espaçamento entre colunas */
-    width: 100%; /* Garante que o conteúdo ocupe toda a largura */
-}
-
-.col-md-4 {
-    flex-basis: 30%; /* A logo ocupa 50% do espaço */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.logo-container {
+    flex-basis: 10%; /* Define espaço para a logo */
 }
 
 .logo {
-    height: 150px; /* Ajusta o tamanho da logo */
-    margin-bottom: 10px;
-}
-
-.social-media {
-    display: flex;
-    justify-content: flex-start; /* Alinha os ícones de redes sociais à esquerda */
-    margin-top: 10px;
-}
-
-.social-media li {
-    list-style: none;
-    margin-right: 10px;
-}
-
-.social-media a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    text-decoration: underline;
+    height: 150px; /* Tamanho da logo */
 }
 
 .conteudo {
-    flex-basis:20%; /* O conteúdo ocupa 25% de largura */
-    text-align: justify; /* Alinha o texto à direita */
+    flex-basis: 50%; /* Espaço do conteúdo central */
+    display: flex;
+    justify-content: space-around; /* Espaçamento entre os blocos de conteúdo */
+}
+
+.conteudo div {
+    display: flex;
+    flex-direction: column; /* Garante que o h3 fique acima do p */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
 }
 
 .conteudo h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Pequeno espaçamento entre o h3 e o p */
+    font-size: 18px; /* Tamanho do texto do título */
+    text-decoration: underline; /* Sublinha o título */
 }
 
 .conteudo p {
-    margin-bottom: 5px;
+    margin: 0; /* Remove margens para que o p fique logo abaixo do h3 */
+    font-size: 14px; /* Tamanho do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.social-media-container {
+    flex-basis: 10%; /* Espaço para as redes sociais */
+    display: flex; /* Usar flex para alinhamento */
+    justify-content: flex-end; /* Alinha os ícones à direita */
+}
+
+.social-media-container ul {
+    display: flex; /* Mantém os itens em linha */
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
+}
+
+.social-media-container li {
+    margin-left: 20px; /* Espaço entre os ícones */
+}
+
+.social-icon {
+    width: 44px; /* Define um tamanho fixo para os ícones */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .copyright {
-    text-align: right;
-    font-size: 14px;
-    margin-top: 150px;
-    width: 100%;
+    text-align: right; /* Alinha o texto à direita */
+    font-size: 14px; /* Tamanho do texto do copyright */
+    margin-top: 10px; /* Margem acima do copyright */
+    width: 100%; /* Garante que ocupe a largura total */
 }

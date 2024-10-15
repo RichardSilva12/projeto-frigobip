@@ -51,6 +51,25 @@ min-height: 50vh;
   width: 60%; /* Define uma largura fixa para manter o texto centralizado */
 }
 
+/* Estilo para os ícones e suas descrições */
+.info-icons {
+  display: flex; /* Flexbox para alinhar itens em linha */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  margin: 20px 0; /* Margem acima e abaixo */
+}
+
+.info-item {
+  display: flex; /* Flexbox para o ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
+  margin: 0 20px; /* Espaçamento entre os ícones */
+}
+
+.info-icon {
+  width: 70px; /* Tamanho do ícone */
+  height: auto; /* Mantém a proporção do ícone */
+  margin-right: 40px; /* Espaço entre o ícone e o texto */
+}
 
 /* Footer sempre na parte inferior */
 footer {

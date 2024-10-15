@@ -28,27 +28,41 @@
   cursor: pointer;
 }
 
+/* Estiliza o conteúdo da navegação */
 .header .conteudo {
   flex-grow: 1;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
+/* Remove os estilos padrão da lista */
 .header .conteudo ul {
-  list-style: none;
+  list-style: none; /* Remove as bolinhas da lista */
   margin: 0;
   padding: 0;
   display: flex;
 }
 
+/* Define o espaçamento entre os itens da lista */
 .header .conteudo li {
-  margin-right: 20px;
+  margin-right: 20px; /* Aumentei o espaço entre os links */
 }
 
+/* Estiliza os links sem sublinhado inicialmente */
 .header .conteudo a {
   color: #fff;
   text-decoration: none;
+  font-size: 18px; /* Tamanho da fonte */
+  transition: text-decoration 0.3s ease, color 0.3s ease; /* Animação suave */
 }
+
+/* Adiciona sublinhado branco ao passar o mouse sobre os links */
+.header .conteudo a:hover {
+  text-decoration: underline;
+  text-decoration-color: white; /* Sublinhar em branco */
+  color: #f1c40f; /* Alterar a cor do texto ao passar o mouse (opcional) */
+}
+
 
 .header .header-right {
   display: flex;

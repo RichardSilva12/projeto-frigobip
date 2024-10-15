@@ -16,17 +16,20 @@ const Receitas = () => {
 
   return (
     <div className="receitas-container">
-      {/*<div className="nome">
-        <span>PRODUTOS DISPONIVEIS</span>
-      </div>*/}
-      {receitas.map((receita) => (
-        <div className="receita-item" key={receita.id}>
-          <img src={receita.imagem} alt={receita.nome} className="receita-img" />
-          <div className="receita-description">
-            <span>Descrição da {receita.nome}</span>
+      <div className="nome">
+        <span>Receitas</span>
+      </div>
+      <br />
+      <div className="receitas-items-container">
+        {receitas.map((receita) => (
+          <div className="receita-item" key={receita.id}>
+            <img src={receita.imagem} alt={receita.nome} className="receita-img" />
+            <div className="receita-description">
+              <span>Descrição da {receita.nome}</span>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

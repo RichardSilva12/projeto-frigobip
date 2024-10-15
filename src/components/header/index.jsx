@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importe o Link do React Router
-import facebookIcon from '../../../src/assets/img/facebook_108044.png';
-import instagramIcon from '../../../src/assets/img/instagram_108043.png';
+import facebookIcon from '../../../src/assets/img/facebook.png';
+import instagramIcon from '../../../src/assets/img/instagram.png';
+import linkedinIcon from '../../../src/assets/img/linkedin.png';
 import logo from '../../assets/img/logo-bip.png';
 import './style.css';
 
@@ -23,12 +24,12 @@ function Header() {
         </ul>
       </nav>
       <div className="header-right">
-        <button>Sign Up</button>
-        <button>Log In</button>
+        <button>ENTRAR</button>
       </div>
       <div className="logos">
         <img src={instagramIcon} alt="Instagram" className="social-icon" />
         <img src={facebookIcon} alt="Facebook" className="social-icon" />
+        <img src={linkedinIcon} alt="Linkedin" className="social-icon" />
       </div>
     </header>
   );
