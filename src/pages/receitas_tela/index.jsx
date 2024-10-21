@@ -1,17 +1,99 @@
 import React from 'react';
+import iconePessoa from '../../assets/img/icons8-pessoa-30.png';
+import iconeTempo from '../../assets/img/icons8-relog.png';
+import receita1Img from '../../assets/img/receita1.jpeg';
+import receita2Img from '../../assets/img/receita2.jpeg';
+import receita3Img from '../../assets/img/receita3.jpeg';
+import receita4Img from '../../assets/img/receita4.jpeg';
+import receita5Img from '../../assets/img/receita5.jpeg';
+import receita6Img from '../../assets/img/receita6.jpeg';
 import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';
 import './style.css';
 
 function Receita() {
+  const receitas = [
+    { id: 1, nome: 'Receita 1', imagem: receita1Img },
+    { id: 2, nome: 'Receita 2', imagem: receita2Img },
+    { id: 3, nome: 'Receita 3', imagem: receita3Img },
+    { id: 4, nome: 'Receita 4', imagem: receita4Img },
+    { id: 5, nome: 'Receita 5', imagem: receita5Img },
+    { id: 6, nome: 'Receita 6', imagem: receita6Img },
+  ];
+
   return (
     <div className="receita-page">
       <Header />
       <div className="receita-container">
-        <h1>RECEITA</h1>
+        <h1>RECEITAS</h1>
       </div>
       <div className='info-container_tela'>
-        {/* Conteúdo adicional pode ser colocado aqui */}
+        <div className="receitas-grid">
+          {receitas.map((receita) => (
+            <div key={receita.id} className="receita-texto">
+              <img src={receita.imagem} alt={receita.nome} className="receita-img-texto" />
+              <div className="receita-info">
+                
+                {receita.id === 1 && (
+                  <>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <h3>{receita.nome}</h3>
+                    </a>
+                    <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 30 min</p>
+                    <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 2 pessoas</p>
+                  </>
+                  
+                )}
+                {receita.id === 2 && (
+                  <>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                        <h3>{receita.nome}</h3>
+                    </a>
+                    <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 40 min</p>
+                    <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 2 pessoas</p>
+                  </>
+                )}
+                {receita.id === 3 && (
+                  <>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <h3>{receita.nome}</h3>
+                    </a>
+                    <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 1 hr</p>
+                    <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 6 pessoas</p>
+                  </>
+                )}
+                {receita.id === 4 && (
+                  <>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <h3>{receita.nome}</h3>
+                    </a>
+                    <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 1 hr</p>
+                    <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 5 pessoas</p>
+                  </>
+                )}
+                {receita.id === 5 && (
+                  <>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <h3>{receita.nome}</h3>
+                    </a>
+                    <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 50 min</p>
+                    <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 2 pessoas</p>
+                  </>
+                )}
+                {receita.id === 6 && (
+                  <>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <h3>{receita.nome}</h3>
+                    </a>
+                    <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 1 hr</p>
+                    <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 4 pessoas</p>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="carregar-mais">Carregar mais</button>
       </div>
       <Footer />
     </div>

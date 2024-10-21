@@ -37,7 +37,7 @@
 .info-run {
     width: 70%; /* 70% da largura do container */
     font-size: 14px; /* Tamanho da fonte */
-    margin: 0; /* Remove margens */
+    margin: 100px; /* Remove margens */
     text-align: justify; /* Justifica o texto */
 }
   

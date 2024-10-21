@@ -45,3 +45,84 @@ flex-grow: 1; /* Faz o container crescer até o rodapé */
 footer {
 margin-top: auto; /* Empurra o footer para baixo */
 }
+
+
+/* Container da história com imagem à esquerda e texto à direita */
+.conteudo-historia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.imagem-historia {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.texto-historia {
+  max-width: 1000px;
+  text-align: justify;
+}
+
+/* Linha do tempo */
+.linha-do-tempo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.ano {
+  background-color: #faeb13;
+  color: black;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ano:hover {
+  background-color: #8d041e;
+}
+
+/* Ao passar o mouse em cima, mostra a história associada a cada ano */
+.ano::after {
+  content: attr(data-historia);
+  display: block;
+  opacity: 0;
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.ano:hover::after {
+  opacity: 1;
+}
+
+
+/* Botão dentro da classe etica */
+.btn-etica {
+  background-color: #b10127; /* Cor de fundo do botão */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px; /* Espaçamento à esquerda para alinhamento */
+}
+
+.btn-etica:hover {
+  background-color: #8d041e; /* Cor ao passar o mouse */
+}
