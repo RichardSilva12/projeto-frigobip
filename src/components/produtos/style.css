@@ -1,16 +1,16 @@
 /* Container geral de produtos com fundo amarelado */
-.produtos-container {
+.produtos-container-home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 5px 10px;
+    padding: 80px 5px 20px;
     background-color: #B16010; /* Amarelo claro */
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Container para os itens de produto */
-.produto-items {
+.produto-items-home {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -24,8 +24,9 @@
     height: 150px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 4px 8px rgba(0.7, 0.9, 0.4, 0.7);
     transition: transform 0.3s ease;
+    background-color: #c28a22;
 }
 
 /* Efeito de zoom ao passar o mouse sobre o item */
@@ -35,7 +36,7 @@
 
 /* Imagem do produto */
 .produto-img {
-    width: 100%;
+    width: 70%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -86,6 +87,10 @@
     margin-top: 20px;
     width: 100%; /* O botão ocupará toda a largura abaixo das imagens */
     padding-right: 20px; /* Espaçamento à direita */
+}
+.produtos-info span {
+    color: white;
+    font-size: 14px;
 }
 
 .btn-veja-mais {

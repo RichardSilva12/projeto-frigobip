@@ -115,3 +115,12 @@ footer {
 .receita-link:hover {
   cursor: pointer;
 }
+
+
+.receita-info button {
+  background-color: #ad9831;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 5px;
+  font-weight: bold;
+}

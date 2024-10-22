@@ -1,10 +1,10 @@
 
 import React from 'react';
-import image1 from '../../../src/assets/img_produtos/produto1.jpeg';
-import image2 from '../../../src/assets/img_produtos/produto2.jpeg';
-import image3 from '../../../src/assets/img_produtos/produto3.jpeg';
-import image4 from '../../../src/assets/img_produtos/produto4.jpeg';
-import image5 from '../../../src/assets/img_produtos/produto5.jpeg';
+import image1 from '../../../src/assets/img_produtos/produto1.png';
+import image2 from '../../../src/assets/img_produtos/produto2.png';
+import image3 from '../../../src/assets/img_produtos/produto3.png';
+import image4 from '../../../src/assets/img_produtos/produto4.png';
+import image5 from '../../../src/assets/img_produtos/produto5.png';
 import './style.css';
 
 const Produtos = () => {
@@ -17,11 +17,11 @@ const Produtos = () => {
   ];
 
   return (
-    <div className="produtos-container">
+    <div className="produtos-container-home">
       <div className="nome">
         <span>PRODUTOS DISPONIVEIS</span>
       </div>
-      <div className="produto-items">
+      <div className="produto-items-home">
         {produtos.map((produto) => (
           <div className="produto-item" key={produto.id}>
             <img src={produto.imagem} alt={produto.nome} className="produto-img" />

@@ -36,57 +36,64 @@ function Receita() {
                 
                 {receita.id === 1 && (
                   <>
-                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
-                      <h3>{receita.nome}</h3>
-                    </a>
+                    <h3>{receita.nome}</h3>
                     <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 30 min</p>
                     <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 2 pessoas</p>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <button>MODO PREPARO</button>  
+                    </a>
                   </>
                   
                 )}
                 {receita.id === 2 && (
                   <>
-                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
-                        <h3>{receita.nome}</h3>
-                    </a>
+                    <h3>{receita.nome}</h3>
                     <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 40 min</p>
                     <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 2 pessoas</p>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <button>MODO PREPARO</button>    
+                    </a>
                   </>
                 )}
                 {receita.id === 3 && (
                   <>
-                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
-                      <h3>{receita.nome}</h3>
-                    </a>
+                    <h3>{receita.nome}</h3>
                     <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 1 hr</p>
                     <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 6 pessoas</p>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <button>MODO PREPARO</button>  
+                    </a>
                   </>
                 )}
                 {receita.id === 4 && (
                   <>
-                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
-                      <h3>{receita.nome}</h3>
-                    </a>
+                    <h3>{receita.nome}</h3>
                     <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 1 hr</p>
                     <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 5 pessoas</p>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <button>MODO PREPARO</button>
+                    </a>
                   </>
                 )}
                 {receita.id === 5 && (
                   <>
-                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
-                      <h3>{receita.nome}</h3>
-                    </a>
+                    <h3>{receita.nome}</h3>
                     <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 50 min</p>
                     <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 2 pessoas</p>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <button>MODO PREPARO</button>
+                    </a>
                   </>
                 )}
                 {receita.id === 6 && (
                   <>
-                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
-                      <h3>{receita.nome}</h3>
-                    </a>
+                    <h3>{receita.nome}</h3>
                     <p><img src={iconeTempo} alt="Ícone de tempo" className="icone" /> 1 hr</p>
                     <p><img src={iconePessoa} alt="Ícone de pessoa" className="icone" /> 4 pessoas</p>
+                    <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                      <button>MODO PREPARO</button>
+                    </a>
+                    
                   </>
                 )}
               </div>

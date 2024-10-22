@@ -17,14 +17,16 @@ function Header() {
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/institucional">Institucional</Link></li>
-          <li><Link to="#">Produtos</Link></li>
+          <li><Link to="/produtos">Produtos</Link></li>
           <li><Link to="/receitas_tela">Receitas</Link></li>
           <li><Link to="/trabalheConosco">Trabalhe Conosco</Link></li>
           <li><Link to="/contact">Contato</Link></li>
         </ul>
       </nav>
       <div className="header-right">
-        <button>ENTRAR</button>
+        <Link to="/login">
+          <button>ENTRAR</button>
+        </Link>
       </div>
       <div className="logos">
         <img src={instagramIcon} alt="Instagram" className="social-icon" />
