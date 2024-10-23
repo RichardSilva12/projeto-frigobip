@@ -27,7 +27,7 @@ body {
 .info-container_produto {
   background-color: #DC7B1A; /* Fundo vermelho */
   text-align: center;
-  padding: 100px 0; /* Espaçamento de 40px */
+  padding: 0px 0; /* Espaçamento de 40px */
   font-weight: bold;
   margin-top: 100px; /* Espaçamento abaixo do header */
   flex-grow: 1; /* Faz o container crescer até o rodapé */
@@ -118,18 +118,42 @@ footer {
   background-color: #45a049; /* Cor do botão ao passar o mouse */
 }
 
-
-/* Ícone do carrinho flutuante */
-.cart-icon-float {
-  position: fixed; /* Mantém o ícone fixo na tela */
-  bottom: 20px;    /* Define a distância da parte inferior da tela */
-  right: 20px;     /* Define a distância da margem direita */
-  width: 50px;     /* Largura do ícone */
-  height: 50px;    /* Altura do ícone */
-  cursor: pointer; /* Cursor de ponteiro ao passar sobre o ícone */
-  z-index: 1000;   /* Certifique-se de que o ícone fique à frente dos outros elementos */
+/* Container que envolve o ícone do carrinho e o contador */
+.cart-container {
+  position: fixed;
+  bottom: 20px; /* Mantém o ícone a 20px da parte inferior da tela */
+  right: 20px;  /* Mantém o ícone a 20px do lado direito da tela */
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  padding: 10px;    /* Espaçamento interno */
+  padding: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícone do carrinho */
+.cart-icon-float {
+  width: 100%;
+  height: 100%;
+  cursor: pointer; /* Para dar um efeito de ponteiro no ícone */
+}
+
+/* Estilização do número de itens no carrinho */
+.card-status {
+  position: absolute;
+  top: -5px;     /* Alinha o contador um pouco acima do ícone */
+  right: -5px;   /* Alinha o contador à direita do ícone */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

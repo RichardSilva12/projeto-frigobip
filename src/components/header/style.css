@@ -67,17 +67,31 @@
 .header .header-right {
   display: flex;
   align-items: center;
+  
 }
 
 .header .header-right button {
   margin-left: 20px;
-  background-color: #b16010;
-  color: #000;
+  background-color: #b84242; /* Vermelho suave */
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  color: #fff; /* Mantém o texto branco para contraste */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.header .header-right button:hover {
+  background-color: #a03b3b; /* Tom um pouco mais escuro no hover */
+  transform: scale(1.05);
+}
+
+
+
+
+
 
 /*  icons */
 .header .logos {

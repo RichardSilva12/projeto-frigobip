@@ -7,6 +7,10 @@
     background-color: #B16010; /* Amarelo claro */
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .nome{
+        margin-bottom: 50px;
+        
+    }
 }
 
 /* Container para os itens de produto */

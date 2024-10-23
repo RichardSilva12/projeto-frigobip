@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import cartIcon from '../../assets/img_produtos/carrinhoCompras.png';
 import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';
@@ -30,30 +31,64 @@ function Produtos() {
     { id: 10, nome: 'Moela', imagem: produto10Img },
   ];
 
-  // Estado para controlar a quantidade de cada produto (opcional, pode ser removido se não for mais necessário)
-  const [quantidades, setQuantidades] = useState(Array(produtos.length).fill(0));
+  // Estado para armazenar a quantidade total de itens no carrinho
+  const [totalCarrinho, setTotalCarrinho] = useState(0);
+
+  // Carregar dados do localStorage ao iniciar
+  useEffect(() => {
+    const carrinhoSalvo = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const totalDeItens = carrinhoSalvo.reduce((acc, item) => acc + item.quantidade, 0);
+    setTotalCarrinho(totalDeItens); // Atualiza o totalCarrinho com base no carrinho salvo
+
+    // Atualiza o localStorage se o carrinho estiver vazio
+    if (totalDeItens === 0) {
+      localStorage.removeItem('totalCarrinho');
+    } else {
+      localStorage.setItem('totalCarrinho', totalDeItens); // Armazena o total atualizado
+    }
+  }, []);
 
   // Função para comprar o produto
-  const comprarProduto = (index) => {
-    const novasQuantidades = [...quantidades];
-    novasQuantidades[index] += 1; // Adiciona uma unidade ao carrinho
-    setQuantidades(novasQuantidades);
-    alert(`${produtos[index].nome} foi adicionado ao carrinho!`); // Exibe uma mensagem de confirmação
+  const comprarProduto = (produto) => {
+    // Recupera o carrinho do localStorage
+    const carrinhoSalvo = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // Verifica se o produto já está no carrinho
+    const produtoExistente = carrinhoSalvo.find((item) => item.id === produto.id);
+    
+    if (produtoExistente) {
+      produtoExistente.quantidade += 1; // Aumenta a quantidade
+    } else {
+      // Adiciona um novo produto ao carrinho
+      carrinhoSalvo.push({ ...produto, quantidade: 1 });
+    }
+
+    // Salva o carrinho atualizado no localStorage
+    localStorage.setItem('carrinho', JSON.stringify(carrinhoSalvo));
+
+    // Atualiza o total de itens no carrinho
+    const novoTotal = totalCarrinho + 1;
+    setTotalCarrinho(novoTotal);
+    localStorage.setItem('totalCarrinho', novoTotal); // Armazena o novo total no localStorage
+
+    alert(`${produto.nome} foi adicionado ao carrinho!`);
   };
 
   return (
     <div className='page'>
       <Header />
-      {/* Ícone do carrinho flutuante */}
-      <a href="#">
-        <img src={cartIcon} alt="Carrinho" className="cart-icon-float" />
-      </a>
+      <div className="cart-container">
+        <Link to="/card">
+          <img src={cartIcon} alt="Carrinho" className="cart-icon-float" />
+          {totalCarrinho > 0 && <span className='card-status'>{totalCarrinho}</span>} {/* Exibe apenas se totalCarrinho for maior que 0 */}
+        </Link>
+      </div>
       <div className="produtos-container">
         <h1>NOSSOS PRODUTOS</h1>
       </div>
       <div className="info-container_produto">
         <div className="produto-grid">
-          {produtos.map((produto, index) => (
+          {produtos.map((produto) => (
             <div key={produto.id} className="produto-texto">
               <img src={produto.imagem} alt={produto.nome} className="produto-img-texto" />
               <div className="produto-info">
@@ -61,7 +96,7 @@ function Produtos() {
                 <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
                   <button className='btn-leia-mais'>Leia mais</button>
                 </a>
-                <button className="btn-comprar" onClick={() => comprarProduto(index)}>COMPRAR</button>
+                <button className="btn-comprar" onClick={() => comprarProduto(produto)}>COMPRAR</button>
               </div>
             </div>
           ))}

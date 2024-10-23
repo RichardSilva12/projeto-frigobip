@@ -1,0 +1,143 @@
+/* Remove qualquer margem ou padding entre os componentes principais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+/* Ajuste da página de receita */
+/* Estilo geral da página do carrinho */
+.carrinho-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  /* Margem superior de 20px para afastar do header */
+  padding: 100px 500px 100px 100px;
+  /* Ajuste no padding para dar mais espaço dentro do container */
+  background-color: #f9f9f9;
+  /* Fundo suave para o carrinho */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra leve para destaque */
+}
+
+/* Ajustes no card-page para espaçar o conteúdo do header */
+.card-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  padding-top: 140px;
+  /* Dá espaço suficiente abaixo do header */
+}
+
+
+.carrinho-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Estilo para os itens do carrinho */
+.carrinho-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.carrinho-item-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  /* Garante que a imagem se ajuste corretamente */
+}
+
+.carrinho-item-info {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.carrinho-item-info h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.carrinho-item-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Controles de quantidade */
+.carrinho-item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.carrinho-item-controls button {
+  background-color: #ff5757;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.carrinho-item-controls button:hover {
+  background-color: #ff4040;
+}
+
+.carrinho-item-controls span {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Botão para remover produto */
+.btn-remover {
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-remover:hover {
+  background-color: #e60000;
+}
+
+/* Botão para finalizar o pedido */
+.btn-finalizar {
+  display: block;
+  width: 100%;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-finalizar:hover {
+  background-color: #218838;
+}
+
+/* Texto para o carrinho vazio */
+.carrinho-container p {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
