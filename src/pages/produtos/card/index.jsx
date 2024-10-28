@@ -1,39 +1,63 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../../components/header/index';
 import './style.css'; // Estilização da página do carrinho
 
 function Carrinho() {
   const [carrinho, setCarrinho] = useState([]);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
 
-  // Carrega o estado do carrinho do localStorage ao carregar a página
   useEffect(() => {
     const carrinhoSalvo = JSON.parse(localStorage.getItem('carrinho')) || [];
     setCarrinho(carrinhoSalvo);
   }, []);
 
-  // Função para remover um produto do carrinho
   const removerProduto = (index) => {
     const novoCarrinho = [...carrinho];
-    novoCarrinho.splice(index, 1); // Remove o produto do carrinho
+    novoCarrinho.splice(index, 1);
     setCarrinho(novoCarrinho);
-    localStorage.setItem('carrinho', JSON.stringify(novoCarrinho)); // Atualiza no localStorage
+    localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
-  // Função para aumentar a quantidade de um produto
   const aumentarQuantidade = (index) => {
     const novoCarrinho = [...carrinho];
-    novoCarrinho[index].quantidade += 1; // Aumenta a quantidade
+    novoCarrinho[index].quantidade += 1;
     setCarrinho(novoCarrinho);
-    localStorage.setItem('carrinho', JSON.stringify(novoCarrinho)); // Atualiza no localStorage
+    localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
-  // Função para diminuir a quantidade de um produto
   const diminuirQuantidade = (index) => {
     const novoCarrinho = [...carrinho];
     if (novoCarrinho[index].quantidade > 1) {
-      novoCarrinho[index].quantidade -= 1; // Diminui a quantidade
+      novoCarrinho[index].quantidade -= 1;
       setCarrinho(novoCarrinho);
-      localStorage.setItem('carrinho', JSON.stringify(novoCarrinho)); // Atualiza no localStorage
+      localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
+    }
+  };
+
+  // Função para finalizar o pedido
+  const finalizarPedido = async () => {
+    const pedido = {
+      nome: nome,
+      email: email,
+      produtos: carrinho.map(produto => produto.nome),
+    };
+
+    try {
+      const response = await fetch('/api/enviar-pedido', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(pedido),
+      });
+
+      const result = await response.text();
+      alert(result); // Exibe a resposta do servidor
+    } catch (error) {
+      console.error('Erro ao enviar o pedido:', error);
+      alert('Ocorreu um erro ao enviar o pedido. Tente novamente.');
     }
   };
 
@@ -41,6 +65,9 @@ function Carrinho() {
     <div className="card-page">
       <Header />
       <div className="carrinho-container">
+        {/* Link para a página ./produto com estilo de botão e seta */}
+        <Link to="/produtos" className="btn-voltar">Voltar</Link>
+        <br />
         <h1>Seu Carrinho</h1>
         {carrinho.length === 0 ? (
           <p>Seu carrinho está vazio.</p>
@@ -62,10 +89,26 @@ function Carrinho() {
           ))
         )}
         {carrinho.length > 0 && (
-          <button className="btn-finalizar">Finalizar Pedido</button>
+          <div className="formulario-pedido">
+            <h2>Informações do Cliente</h2>
+            <input 
+              type="text" 
+              placeholder="Nome" 
+              value={nome} 
+              onChange={(e) => setNome(e.target.value)} 
+              required 
+            />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              required 
+            />
+            <button className="btn-finalizar" onClick={finalizarPedido}>Finalizar Pedido</button>
+          </div>
         )}
       </div>
-      {/*<Footer />*/}
     </div>
   );
 }

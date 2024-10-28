@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Contato from './pages/contact/index'; // Certifique-se de que o caminho e nome do arquivo estão corretos
 import Home from './pages/home/index'; // Certifique-se de que o caminho e nome do arquivo estão corretos
 import Institucional from './pages/institucional/index';
+import Login from './pages/login/index';
 import Carrinho from './pages/produtos/card/index';
 import Produtos from './pages/produtos/index';
 import Receita from './pages/receitas_tela/index';
@@ -19,7 +20,8 @@ function AppRoutes() {
         <Route path="/institucional" element={<Institucional />} />
         <Route path="/trabalheConosco" element={<TrabalheConosco />} />
         <Route path="/produtos" element={<Produtos />} />
-        <Route path="/card" element={<Carrinho />} /> {/* Página de Carrinho */}
+        <Route path="/card" element={<Carrinho />} />
+        <Route path="/login" element={<Login />} /> {/* Página de Carrinho */}
       </Routes>
     </BrowserRouter>
   );
