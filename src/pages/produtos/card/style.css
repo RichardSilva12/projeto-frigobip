@@ -11,7 +11,7 @@
   max-width: 1200px;
   margin: 20px auto;
   /* Margem superior de 20px para afastar do header */
-  padding: 100px 500px 100px 100px;
+  padding: 50px 100px 100px 100px;
   /* Ajuste no padding para dar mais espaço dentro do container */
   background-color: #f9f9f9;
   /* Fundo suave para o carrinho */
@@ -50,8 +50,8 @@
 }
 
 .carrinho-item-img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 150px;
   border-radius: 8px;
   object-fit: cover;
   /* Garante que a imagem se ajuste corretamente */
@@ -59,6 +59,7 @@
 
 .carrinho-item-info {
   flex-grow: 1;
+  padding: 10px 100px;
   margin-left: 20px;
 }
 
@@ -110,6 +111,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  margin-top: 20px;
 }
 
 .btn-remover:hover {

@@ -9,11 +9,11 @@ import './style.css';
 
 const Produtos = () => {
   const produtos = [
-    { id: 1, nome: 'Produto 1', imagem: image1 },
-    { id: 2, nome: 'Produto 2', imagem: image2 },
-    { id: 3, nome: 'Produto 3', imagem: image3 },
-    { id: 4, nome: 'Produto 4', imagem: image4 },
-    { id: 5, nome: 'Produto 5', imagem: image5 },
+    { id: 1, nome: 'Frando Inteiro', imagem: image1 },
+    { id: 2, nome: 'Coxinha', imagem: image2 },
+    { id: 3, nome: 'Asa', imagem: image3 },
+    { id: 4, nome: 'Tulipa', imagem: image4 },
+    { id: 5, nome: 'Sobrecoxa', imagem: image5 },
   ];
 
   return (

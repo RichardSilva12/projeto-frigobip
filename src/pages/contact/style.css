@@ -131,3 +131,66 @@ footer {
   margin-top: 20px;
   flex-grow: 1;
 }
+
+
+
+
+/*    responsivel */
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+  .contato-container {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+
+  .info-container_tela p {
+    width: 90%;
+  }
+
+  .info-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contato-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+  .forme {
+    width: 90%;
+  }
+
+  .info-icon {
+    width: 40px;
+  }
+
+  .forme-contato button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-container {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .forme {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .info-container_tela p {
+    width: 95%;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

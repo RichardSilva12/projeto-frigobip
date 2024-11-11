@@ -1,12 +1,48 @@
-import React from 'react';
-import resumeIcon from '../../assets/img/curriculo.png'; // Adicione o caminho correto
-import emailIcon from '../../assets/img/email.png'; // Adicione o caminho correto
-import phoneIcon from '../../assets/img/telefone.png'; // Adicione o caminho correto
+import axios from 'axios';
+import React, { useState } from 'react';
+import resumeIcon from '../../assets/img/curriculo.png';
+import emailIcon from '../../assets/img/email.png';
+import phoneIcon from '../../assets/img/telefone.png';
 import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';
 import './style.css';
 
 function Contato() {
+  const [formData, setFormData] = useState({
+    nome: '',
+    telefone: '',
+    email: '',
+    assunto: '',
+    descricao: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Verifique o conteúdo de formData antes de enviar
+    console.log('Dados do formulário:', formData);
+  
+    // Enviar dados para o servidor
+    axios.post('http://localhost:5000/send-email', {
+      nome: formData.nome,
+      telefone: formData.telefone,
+      email: formData.email,
+      assunto: formData.assunto,
+      descricao: formData.descricao
+    })
+    .then(() => alert('Email enviado com sucesso!'))
+    .catch((error) => alert('Erro ao enviar email: ' + error.message));
+  };
+  
+
   return (
     <div className='page'>
       <Header />
@@ -33,37 +69,59 @@ function Contato() {
 
         <div className='forme'>
           <h2>ENVIE SUA MENSAGEM</h2>
-          <form className="forme-contato">
+          <form className="forme-contato" onSubmit={handleSubmit}>
             <label>Nome Completo</label>
-            <input type="text" placeholder="Digite seu nome completo" />
+            <input
+              type="text"
+              name="nome"
+              placeholder="Digite seu nome completo"
+              value={formData.nome}
+              onChange={handleChange}
+              required
+            />
 
             <label>Telefone com DDD</label>
-            <input type="text" placeholder="Digite seu telefone" />
+            <input
+              type="text"
+              name="telefone"
+              placeholder="Digite seu telefone"
+              value={formData.telefone}
+              onChange={handleChange}
+              required
+            />
 
             <label>E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
             <label>Assunto</label>
-            <input type="text" placeholder="Assunto" />
+            <input
+              type="text"
+              name="assunto"
+              placeholder="Assunto"
+              value={formData.assunto}
+              onChange={handleChange}
+              required
+            />
 
             <label>Descrição</label>
-            <textarea placeholder="Escreva sua mensagem"></textarea>
+            <textarea
+              name="descricao"
+              placeholder="Escreva sua mensagem"
+              value={formData.descricao}
+              onChange={handleChange}
+              required
+            />
 
             <button type="submit">Enviar</button>
           </form>
         </div>
-      </div>
-
-      <div className='mapa'>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23436.04411183087!2d-48.7694633455818!3d-22.1525466697517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf4d192ea3f967%3A0xb2a4cac3d56ff8e!2sFrigoBip!5e0!3m2!1spt-BR!2sbr!4v1728931824593!5m2!1spt-BR!2sbr" 
-          width="100%" 
-          height="400" 
-          style={{border: 0}} 
-          allowFullScreen="" 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
 
       <Footer />
