@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+/*const nodemailer = require('nodemailer');
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -148,3 +148,5 @@ app.post('/enviar-pedido', (req, res) => {
 app.listen(5000, () => {
     console.log('Servidor rodando na porta 5000');
 });
+
+*/
