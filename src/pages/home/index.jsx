@@ -1,10 +1,12 @@
 import React from 'react';
 import Carousel from '../../components/carrosel/index';
 import Container from '../../components/conteiner/index';
+import Depoimentos from '../../components/depoimentos/index';
 import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';
 import Produtos from '../../components/produtos/index';
 import Receitas from '../../components/receitas/index';
+import Selos from '../../components/seloQualidade/index';
 import Sobre from '../../components/sobre/index';
 import './style.css'; // Importa o arquivo CSS
 
@@ -22,6 +24,8 @@ function Home() {
       </div>
       {/*<ContainerBranco />*/}
       <Sobre />
+      <Depoimentos />
+      <Selos />
       <Footer />
     </div>
   );

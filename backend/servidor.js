@@ -143,11 +143,11 @@ app.post('/enviar-pedido', (req, res) => {
   transport.sendMail(mailOptions)
     .then(() => {
       console.log('Email enviado com sucesso (Pedidos)!');
-      res.send('Candidatura enviada com sucesso!');
+      res.send('Pedidos enviados com sucesso!');
     })
     .catch((err) => {
       console.error('Erro ao enviar e-mail (Pedidos):', err);
-      res.status(500).send('Erro ao enviar candidatura');
+      res.status(500).send('Erro ao enviar pedidos');
     });
 });
 

@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';

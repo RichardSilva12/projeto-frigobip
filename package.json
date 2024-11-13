@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node api/servidor.js",
-    "server-dev": "nodemon api/servidor.js"
+    "start": "node backend/servidor.js",
+    "server-dev": "nodemon backend/servidor.js"
   },
   "dependencies": {
     "axios": "^1.7.7",

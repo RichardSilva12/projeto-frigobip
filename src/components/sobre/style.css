@@ -1,3 +1,19 @@
+/* importando fonte */
+.nome-sobre {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center;    /* Alinha verticalmente ao centro */
+    height: 100px;          /* Defina uma altura adequada para o container */
+  }
+
+.nome-sobre span {
+    font-family: 'Noto Serif', serif; /* Aplicando a nova fonte */
+    font-size: 2.5rem;
+    font-weight: 700; /* Deixe o texto em negrito */
+    text-align: center;
+    color: #000000;
+  }
+
 /* Container informativo */
 .info {
     background-color: #ffffff; /* Cor de fundo branca */

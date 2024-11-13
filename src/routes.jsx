@@ -1,6 +1,7 @@
 // src/routes.jsx
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProdutosHome from './components/produtos/index';
 import Contato from './pages/contact/index'; // Certifique-se de que o caminho e nome do arquivo estão corretos
 import Home from './pages/home/index'; // Certifique-se de que o caminho e nome do arquivo estão corretos
 import Institucional from './pages/institucional/index';
@@ -21,7 +22,8 @@ function AppRoutes() {
         <Route path="/trabalheConosco" element={<TrabalheConosco />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/card" element={<Carrinho />} />
-        <Route path="/login" element={<Login />} /> {/* Página de Carrinho */}
+        <Route path="/login" element={<Login />} /> 
+        <Route path="/produtos" element={<ProdutosHome />} />
       </Routes>
     </BrowserRouter>
   );

@@ -16,7 +16,9 @@ function Header() {
   return (
     <header className="header"> 
       <div className="logo">
+        <Link to="/">
           <img src={logo} alt="Logo" />
+        </Link>
       </div> 
       
       <nav className={`conteudo ${isMenuOpen ? 'active' : ''}`}>

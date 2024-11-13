@@ -1,6 +1,23 @@
-/* Container geral de receitas com fundo amarelado */
+/* import fonte*/
+.nome-receita {
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  align-items: center;    /* Alinha verticalmente ao centro */
+  height: 100px;          /* Defina uma altura adequada para o container */
+}
+
+.nome-receita span {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+
+
+/* Container geral de receitas com fundo amarelado */ 
 .receitas-container {
-  padding: 50px 10px 40px;
+  padding: 30px 10px 40px;
   background-color: #B16010; /* Amarelo claro */
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

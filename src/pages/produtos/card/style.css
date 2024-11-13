@@ -10,14 +10,10 @@
 .carrinho-container {
   max-width: 1200px;
   margin: 20px auto;
-  /* Margem superior de 20px para afastar do header */
   padding: 50px 100px 100px 100px;
-  /* Ajuste no padding para dar mais espaço dentro do container */
   background-color: #f9f9f9;
-  /* Fundo suave para o carrinho */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* Sombra leve para destaque */
 }
 
 /* Ajustes no card-page para espaçar o conteúdo do header */
@@ -26,10 +22,9 @@
   flex-direction: column;
   min-height: 50vh;
   padding-top: 140px;
-  /* Dá espaço suficiente abaixo do header */
 }
 
-
+/* Estilo do título do carrinho */
 .carrinho-container h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -54,7 +49,6 @@
   height: 150px;
   border-radius: 8px;
   object-fit: cover;
-  /* Garante que a imagem se ajuste corretamente */
 }
 
 .carrinho-item-info {
@@ -144,7 +138,7 @@
   color: #777;
 }
 
-
+/* Estilo do botão de voltar */
 .btn-voltar {
   display: inline-flex;
   align-items: center;
@@ -159,4 +153,63 @@
 
 .btn-voltar:hover {
   background-color: #0056b3;
+}
+
+/* Mídia Query para telas pequenas (dispositivos móveis) */
+@media (max-width: 767px) {
+  .carrinho-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* Reduzir o tamanho do título */
+  .carrinho-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Ajustar layout dos itens do carrinho para stack (coluna) em telas pequenas */
+  .carrinho-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .carrinho-item-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .carrinho-item-info {
+    padding: 10px;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .carrinho-item-controls {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .btn-finalizar {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .btn-voltar {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .formulario-pedido input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .formulario-pedido button {
+    width: 100%;
+    padding: 15px;
+  }
 }
