@@ -93,7 +93,7 @@ function Produtos() {
               <img src={produto.imagem} alt={produto.nome} className="produto-img-texto" />
               <div className="produto-info">
                 <h3>{produto.nome}</h3>
-                <a href="https://www.youtube.com/watch?v=DRq_6wLRLEI" className="receita-link">
+                <a href="/assets/produtosfrangos.pdf" download="produtosfrangos.pdf" className="receita-link">
                   <button className='btn-leia-mais'>Leia mais</button>
                 </a>
                 <button className="btn-comprar" onClick={() => comprarProduto(produto)}>COMPRAR</button>
