@@ -100,4 +100,4 @@ Contribuições são sempre bem-vindas! Sinta-se à vontade para enviar pull req
 📧 Contato
 Para mais informações, entre em contato:
 
-Richard Peghin - richard@example.com
+Richard Peghin - richard.a.peghin@gmail.com
